@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Defynweb</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+        <div class="leftSide">
+            <img src="https://images.pexels.com/photos/8051669/pexels-photo-8051669.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Background Picture" />
+        </div>
+      <div class="rightSide">
+        <form>
+          <div class="heading">
+            <h1>Welcome Back!</h1>
+            <p class="description">Hello User welcome to Defynweb</p>
+          </div>
+          <div class="login">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              name="username"
+              autofocus=""
+              autocapitalize="none"
+              autocomplete="username"
+              required=""
+              id="id_username"
+              placeholder="Email or Phone"
+              id="username"
+            />
+
+            <label for="password">Password</label>
+            <div class="pass">
+              <input
+                type="password"
+                name="password"
+                autocomplete="current-password"
+                required=""
+                id="id_password"
+                placeholder="Password"
+              /><i
+                class="far fa-eye"
+                id="togglePassword"
+                style="
+                  position: absolute;
+                  top: 20px;
+                  right: 10px;
+                  cursor: pointer;
+                  color: blue;
+                "
+              ></i>
+            </div>
+
+            <a class="forgot" href="#">Forgot Password</a>
+
+            <button type="button" class="btn">Sign in</button>
+
+            <p class="seperation">Or sign in with</p>
+
+            <button class="btn2">
+              <img
+                src="https://imgs.search.brave.com/35yJ0AAz887gh9V1WNVzv5WiPSmUbdJJlIp-Dp_Rabg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODQ3ZjljYmNlZjEw/MTRjMGI1ZTQ4Yzgu/cG5n"
+              />
+              Sign in with Google
+            </button>
+            <p class="signUp">
+              Don't have an account?<a class="sign" href="#">Sign Up</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+
+
+  <script>
+    const togglePassword = document.querySelector("#togglePassword");
+    const password = document.querySelector("#id_password");
+
+    togglePassword.addEventListener("click", function (e) {
+      const type =
+        password.getAttribute("type") === "password" ? "text" : "password";
+      password.setAttribute("type", type);
+      this.classList.toggle("fa-eye-slash");
+    });
+  </script>
+</html>
