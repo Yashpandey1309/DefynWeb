@@ -191,3 +191,17 @@ input {
     width:90%;
     height:100%;
 }
+
+
+@media (max-width: 1100px)
+{
+
+    .leftSide{
+      display: none;
+      margin: 0 auto;
+    }
+    .rightSide {
+      width: 100%;
+      margin: auto;  
+  }
+}
